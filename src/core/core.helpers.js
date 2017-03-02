@@ -2,6 +2,12 @@
 /* global document: false */
 'use strict';
 
+// < HACK >
+if (!process.env.BROWSER) {
+  global.window = {};
+}
+// </ HACK >
+
 var color = require('chartjs-color');
 
 module.exports = function(Chart) {
